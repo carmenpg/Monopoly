@@ -11,8 +11,8 @@ public class CardCell extends Cell {
 
 	}
     
-    public void playAction() {
-    	
+    public boolean playAction(String msg) {
+    	return true;
     }
     
     public int getType() {
