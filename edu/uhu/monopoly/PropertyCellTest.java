@@ -24,9 +24,7 @@ public class PropertyCellTest extends TestCase {
 		gameMaster.switchTurn();
 		gameMaster.movePlayer(1, cellIndex);
 		cell.playAction();
-		assertEquals(
-				1500 - cell.getRent(),
-				gameMaster.getPlayer(1).getMoney());
+		assertEquals( 1500 - cell.getRent(),gameMaster.getPlayer(1).getMoney());
 		assertEquals(
 				1380 + cell.getRent(),
 				gameMaster.getPlayer(0).getMoney());

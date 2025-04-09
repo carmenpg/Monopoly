@@ -69,7 +69,7 @@ public class Player {
 			PropertyCell cell = getProperty(i);
 			cell.setPropietary(player);
 			if(player == null) {
-				cell.setAvailable(true);
+				cell.setAvailable(true, cell);
 				cell.setNumHouses(0);
 			}
 			else {
