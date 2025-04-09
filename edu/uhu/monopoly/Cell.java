@@ -1,6 +1,6 @@
 package edu.uhu.monopoly;
 
-public abstract class Cell {
+public abstract class Cell implements IOwnable {
 	
 	private String name;
 	protected Player propietary;
@@ -10,6 +10,7 @@ public abstract class Cell {
 		return name;
 	}
 
+	@Override
 	public Player getPropietary() {
 		return propietary;
 	}
@@ -24,6 +25,7 @@ public abstract class Cell {
 		this.name = name;
 	}
 
+	@Override
 	public void setPropietary(Player owner) {
 		this.propietary = owner;
 	}
@@ -32,52 +34,62 @@ public abstract class Cell {
         return name;
     }
 
+	@Override
 	public boolean isAvailable() {
 		return available;
 	}
 
+	@Override
 	public void setAvailable(boolean available) {
 		this.available = available;
 	}
 	
+	@Override
 	public void setAvailable(boolean available, CardCell cardCell) {
 		this.available = available;
 	}
 
 	
 
+	@Override
 	public void setAvailable(boolean available, FreeParkingCell freeParkingCell) {
 		freeParkingCell.available = available;
 	}
 
 
 
+	@Override
 	public void setAvailable(boolean available, GoCell goCell) {
 		goCell.available = available;
 	}
 
 
+	@Override
 	public void setAvailable(boolean available, GoToJailCell goToJailCell) {
 		goToJailCell.available = available;
 	}
 
 
+	@Override
 	public void setAvailable(boolean available, JailCell jailCell) {
 		jailCell.available = available;
 	}
 
 	
 
+	@Override
 	public void setAvailable(boolean available, PropertyCell propertyCell) {
 		propertyCell.available = available;
 	}
 
+	@Override
 	public void setAvailable(boolean available, RailRoadCell railRoadCell) {
 		railRoadCell.available = available;
 	}
 
 	
 
+	@Override
 	public void setAvailable(boolean available, UtilityCell utilityCell) {
 		utilityCell.available = available;
 	}
